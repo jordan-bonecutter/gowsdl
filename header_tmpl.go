@@ -14,6 +14,7 @@ import (
 	"encoding/xml"
 	"time"
 	"github.com/hooklift/gowsdl/soap"
+	. "github.com/jordan-bonecutter/gowsdl/header"
 
 	{{/*range .Imports*/}}
 		{{/*.*/}}
@@ -23,13 +24,5 @@ import (
 // against "unused imports"
 var _ time.Time
 var _ xml.Name
-
-type AnyType struct {
-	InnerXML string ` + "`" + `xml:",innerxml"` + "`" + `
-}
-
-type AnyURI string
-
-type NCName string
-
+var _ soap.SOAPEncoder
 `
